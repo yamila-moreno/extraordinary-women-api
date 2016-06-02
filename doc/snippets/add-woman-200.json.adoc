@@ -1,0 +1,11 @@
+[source,json]
+----
+{
+    "extraordinary_woman": {
+        "occupation": "Physicist",
+        "id": 31,
+        "name": "Lise Meinter",
+        "origin": "Austria"
+    }
+}
+----

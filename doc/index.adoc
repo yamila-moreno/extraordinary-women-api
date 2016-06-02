@@ -1,0 +1,86 @@
+= EXTRAORDINARY WOMEN API DOCUMENTATION
+
+== List women
+This endpoint returns the list of extraordinary women
+
+[cols="h,5a"]
+|===
+|GET| /extraordinary_women
+|===
+
+=== Parameters
+Doesn't take any parameters
+
+=== Responses
+[cols="h,5a"]
+|===
+| Response 200
+| include::../doc/snippets/get-women-200.json.adoc[]
+|===
+
+== Add a new extraordinary woman
+This endpoint adds a new extraordinary woman to the list
+
+[cols="h,5a"]
+|===
+|POST | /extraordinary_woman
+|===
+
+=== Parameters
+[options="header", cols="1,1,1,4"]
+|===
+|Name | Required | Type | Description
+| name | yes | String | The name of the woman.
+| origin | yes | String | The origin of the woman.
+| occupation | yes | String | The occupation of the woman.
+|===
+
+=== Request example
+include::snippets/payloads/add-woman.json.adoc[]
+
+=== Responses
+
+[cols="h,5a"]
+|===
+
+| Response 200
+| include::../doc/snippets/add-woman-200.json.adoc[]
+
+| Response 400
+| include::../doc/snippets/add-woman-400.json.adoc[]
+|===
+
+
+== Extraordinary woman detail
+This endpoint returns the detail of an extraordinary woman given an email
+
+[cols="h,5a"]
+|===
+|GET| /extraordinary_women/{woman_id}
+|===
+
+=== Parameters
+[options="header", cols="1,1,1,4"]
+|===
+|Name | Required | Type | Description
+| uuid | yes | String | The id the extraordinary woman
+|===
+
+
+=== Responses
+[cols="h,5a"]
+|===
+| Response 200
+| include::../doc/snippets/get-woman-200.json.adoc[]
+| Response 404
+| include::../doc/snippets/get-woman-404.json.adoc[]
+|===
+
+
+== Delete a woman
+This endpoint deletes a extraordinary woman from the list
+
+[cols="h,5a"]
+|===
+|DELETE| /extraordinary_woman/{woman_id}
+|===
